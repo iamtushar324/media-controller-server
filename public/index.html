@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#338A6D" />
+    <title>Media Controller</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root">
+      <button onclick="commandpress(`j`)">Desktop Left</button>
+      <button onclick="commandpress(`k`)">Desktop Right</button>
+    </div>
+  </body>
+  <script>
+    function commandpress(key) {
+      fetch("/api/commandpress/"+key);
+    }
+  </script>
+</html>
